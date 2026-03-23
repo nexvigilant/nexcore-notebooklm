@@ -1,0 +1,39 @@
+[package]
+name = "nexcore-notebooklm"
+version = "0.1.0"
+edition = "2024"
+authors = ["NexVigilant Team <team@nexvigilant.com>"]
+license = "LicenseRef-Proprietary"
+description = "NotebookLM integration for NexVigilant — notebook library, session management, and browser-automated research queries"
+
+[dependencies]
+nexcore-error = { workspace = true }
+# Serialization
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+# Date/time
+nexcore-chrono = { workspace = true }
+
+# Error handling
+
+# Logging
+tracing = { workspace = true }
+
+# Unique IDs
+nexcore-id = { workspace = true }
+
+# Home directory
+nexcore-fs = { workspace = true }
+
+# Browser automation (CDP via chromiumoxide)
+chromiumoxide = { version = "0.7", features = ["tokio-runtime"], default-features = false }
+tokio = { workspace = true }
+futures = { workspace = true }
+
+# Concurrency
+parking_lot = "0.12"
+
+
+[lints]
+workspace = true
